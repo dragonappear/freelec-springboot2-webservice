@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="springboot.web.PostsApiControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-09-13T11:11:09" hostname="dragonappear.local" time="0.456">
+  <properties/>
+  <testcase name="Posts_등록된다" classname="springboot.web.PostsApiControllerTest" time="0.361"/>
+  <testcase name="Posts_수정된다" classname="springboot.web.PostsApiControllerTest" time="0.089"/>
+  <system-out><![CDATA[2021-09-13 20:11:09.259  INFO 1746 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [springboot.web.PostsApiControllerTest], using SpringBootContextLoader
+2021-09-13 20:11:09.263  INFO 1746 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [springboot.web.PostsApiControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-09-13 20:11:09.263  INFO 1746 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [springboot.web.PostsApiControllerTest]: PostsApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-09-13 20:11:09.271  INFO 1746 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration springboot.Application for test class springboot.web.PostsApiControllerTest
+2021-09-13 20:11:09.274  INFO 1746 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-09-13 20:11:09.275  INFO 1746 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d92afb6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2bb3fed3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@284e38e6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5c342d2b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5453c604, org.springframework.test.context.transaction.TransactionalTestExecutionListener@60a2ef3b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@397272c1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@44524db1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@efbd0d9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@79d73d0a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5319bc8b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5705c9c]
+2021-09-13 20:11:09.529 DEBUG 1746 --- [o-auto-1-exec-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        posts
+        (create_date, modified_date, author, content, title) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        posts
+        (create_date, modified_date, author, content, title) 
+    values
+        (?, ?, ?, ?, ?)
+2021-09-13 20:11:09.610 DEBUG 1746 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        posts0_.id as id1_0_,
+        posts0_.create_date as create_d2_0_,
+        posts0_.modified_date as modified3_0_,
+        posts0_.author as author4_0_,
+        posts0_.content as content5_0_,
+        posts0_.title as title6_0_ 
+    from
+        posts posts0_
+Hibernate: 
+    select
+        posts0_.id as id1_0_,
+        posts0_.create_date as create_d2_0_,
+        posts0_.modified_date as modified3_0_,
+        posts0_.author as author4_0_,
+        posts0_.content as content5_0_,
+        posts0_.title as title6_0_ 
+    from
+        posts posts0_
+2021-09-13 20:11:09.627 DEBUG 1746 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        posts0_.id as id1_0_,
+        posts0_.create_date as create_d2_0_,
+        posts0_.modified_date as modified3_0_,
+        posts0_.author as author4_0_,
+        posts0_.content as content5_0_,
+        posts0_.title as title6_0_ 
+    from
+        posts posts0_
+Hibernate: 
+    select
+        posts0_.id as id1_0_,
+        posts0_.create_date as create_d2_0_,
+        posts0_.modified_date as modified3_0_,
+        posts0_.author as author4_0_,
+        posts0_.content as content5_0_,
+        posts0_.title as title6_0_ 
+    from
+        posts posts0_
+2021-09-13 20:11:09.638 DEBUG 1746 --- [    Test worker] org.hibernate.SQL                        : 
+    delete 
+    from
+        posts 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        posts 
+    where
+        id=?
+2021-09-13 20:11:09.676 DEBUG 1746 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        posts
+        (create_date, modified_date, author, content, title) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        posts
+        (create_date, modified_date, author, content, title) 
+    values
+        (?, ?, ?, ?, ?)
+8
+2021-09-13 20:11:09.714 DEBUG 1746 --- [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    select
+        posts0_.id as id1_0_0_,
+        posts0_.create_date as create_d2_0_0_,
+        posts0_.modified_date as modified3_0_0_,
+        posts0_.author as author4_0_0_,
+        posts0_.content as content5_0_0_,
+        posts0_.title as title6_0_0_ 
+    from
+        posts posts0_ 
+    where
+        posts0_.id=?
+Hibernate: 
+    select
+        posts0_.id as id1_0_0_,
+        posts0_.create_date as create_d2_0_0_,
+        posts0_.modified_date as modified3_0_0_,
+        posts0_.author as author4_0_0_,
+        posts0_.content as content5_0_0_,
+        posts0_.title as title6_0_0_ 
+    from
+        posts posts0_ 
+    where
+        posts0_.id=?
+2021-09-13 20:11:09.725 DEBUG 1746 --- [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    update
+        posts 
+    set
+        create_date=?,
+        modified_date=?,
+        author=?,
+        content=?,
+        title=? 
+    where
+        id=?
+Hibernate: 
+    update
+        posts 
+    set
+        create_date=?,
+        modified_date=?,
+        author=?,
+        content=?,
+        title=? 
+    where
+        id=?
+2021-09-13 20:11:09.737 DEBUG 1746 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        posts0_.id as id1_0_,
+        posts0_.create_date as create_d2_0_,
+        posts0_.modified_date as modified3_0_,
+        posts0_.author as author4_0_,
+        posts0_.content as content5_0_,
+        posts0_.title as title6_0_ 
+    from
+        posts posts0_
+Hibernate: 
+    select
+        posts0_.id as id1_0_,
+        posts0_.create_date as create_d2_0_,
+        posts0_.modified_date as modified3_0_,
+        posts0_.author as author4_0_,
+        posts0_.content as content5_0_,
+        posts0_.title as title6_0_ 
+    from
+        posts posts0_
+2021-09-13 20:11:09.746 DEBUG 1746 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        posts0_.id as id1_0_,
+        posts0_.create_date as create_d2_0_,
+        posts0_.modified_date as modified3_0_,
+        posts0_.author as author4_0_,
+        posts0_.content as content5_0_,
+        posts0_.title as title6_0_ 
+    from
+        posts posts0_
+Hibernate: 
+    select
+        posts0_.id as id1_0_,
+        posts0_.create_date as create_d2_0_,
+        posts0_.modified_date as modified3_0_,
+        posts0_.author as author4_0_,
+        posts0_.content as content5_0_,
+        posts0_.title as title6_0_ 
+    from
+        posts posts0_
+2021-09-13 20:11:09.752 DEBUG 1746 --- [    Test worker] org.hibernate.SQL                        : 
+    delete 
+    from
+        posts 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        posts 
+    where
+        id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
