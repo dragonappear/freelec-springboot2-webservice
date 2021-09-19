@@ -23,7 +23,7 @@ public class IndexControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
 
         //when
-        Assertions.assertThat(body).contains("스프링 부트로 시작하는 웹서비스 Version 2");
+        Assertions.assertThat(body).contains("스프링 부트로 시작하는 웹서비스 Version 3");
 
         //then
     }
